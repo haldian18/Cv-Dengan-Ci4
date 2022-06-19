@@ -14,34 +14,40 @@
             <div class="col-lg-12 col-xs-8">
                 <div class="text-center">
                     <img src="/asset/img/aldi.jpg" class="rounded-circle" alt="..." width="15%">
-                    <h1 class="pt-2 ">Haldian</h1>
-                    <h3><i>Programmer, Network Enginer, & DevOps Enginner</i></h3>
+                    <h1 class="pt-2 "><?= $data['nama'] ?></h1>
+                    <h3><i>Network administrator, Programmer & DevOps</i></h3>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col-5">
                 <h1>Riwayat Pendidikan</h1>
                 <table class="table table-hover mx-auto ">
+
                     <tr>
-                        <td>POLITEKNIK NEGRI LAMPUNG</td>
+                        <td>Perguruan Tinggi</td>
                         <td> : </td>
-                        <td>2020-2023</td>
+                        <td><?= $data['pergruan_tinggi'] ?></td>
                     </tr>
                     <br>
                     <tr>
-                        <td>SMKN 2 KALIANDA</td>
+                        <td>SMA</td>
                         <td> : </td>
-                        <td>2018-2020</td>
+                        <td><?= $data['sma'] ?></td>
                     </tr>
+                    <br>
                     <tr>
-                        <td>SMPN 2 KALIANDA</td>
+                        <td>SMP</td>
                         <td> : </td>
-                        <td>2016-2018</td>
+                        <td><?= $data['smp'] ?></td>
                     </tr>
                 </table>
+                <a href="<?php echo site_url('cv/add/' . $data['id']); ?>" class="btn btn-sm btn-primary">Tambah</a>
+                <a href="<?php echo site_url('cv/get_edit/' . $data['id']); ?>" class="btn btn-sm btn-warning">Update</a>
+                <a href="<?php echo site_url('cv/delete/' . $data['id']); ?>" class="btn btn-sm btn-danger">Delete</a>
             </div>
             <div class="col-3"></div>
             <div class="col-4">
@@ -50,18 +56,28 @@
                     <tr>
                         <td>Alamat</td>
                         <td> : </td>
-                        <td>KALIANDA</td>
+                        <td><?= $data['alamat'] ?></td>
                     </tr>
                     <br>
                     <tr>
                         <td>Kontak</td>
                         <td> : </td>
-                        <td>0882-XXXX-XXXX</td>
+                        <td><?= $data['kontak'] ?></td>
                     </tr>
                     <tr>
                         <td>E-mail</td>
                         <td> : </td>
-                        <td>haldian@gmail.com</td>
+                        <td><?= $data['email'] ?></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Lahir</td>
+                        <td> : </td>
+                        <td><?= $data['tanggal_lahir'] ?></td>
+                    </tr>
+                    <tr>
+                        <td>Tempat Lahir</td>
+                        <td> : </td>
+                        <td><?= $data['tempat_lahir'] ?></td>
                     </tr>
                 </table>
             </div>
@@ -88,35 +104,35 @@
                         <br>
                         <table class="table table-striped table-hover mx-auto ">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">HTML</div>
+                                <div class="bg-warning text-black progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">HTML</div>
                             </div>
                             <br>
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">CSS</div>
+                                <div class="bg-warning text-black progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">CSS</div>
                             </div>
                             <br>
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100">JS</div>
+                                <div class="bg-warning  text-black progress-bar" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100">JS</div>
                             </div>
                             <br>
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Node</div>
+                                <div class="bg-warning text-black progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Node</div>
                             </div>
                             <br>
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100">PHP</div>
+                                <div class="bg-warning text-black progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100">PHP</div>
                             </div>
                             <br>
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100">Database</div>
+                                <div class="bg-warning text-black progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100">Database</div>
                             </div>
                             <br>
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100">Java</div>
+                                <div class="bg-warning text-black progress-bar" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100">Java</div>
                             </div>
                             <br>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">Network</div>
+                            <div class="progress ">
+                                <div class="bg-warning text-black progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">Network</div>
                             </div>
                         </table>
                     </div>

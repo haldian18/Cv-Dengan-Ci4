@@ -9,7 +9,28 @@
 </head>
 
 <body>
-    <div class="container-fluid p-5 bg-warning">
+    <nav class="navbar bg-dark p-2 navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <a class="navbar-brand text-light" href="cv">Haldian</a>
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="text-warning nav-link outline-warning active" aria-current="page" href="<?php echo site_url('cv/add/' . $data['id']); ?>">Tambah Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-warning nav-link outline-warning active" aria-current="page" href="<?php echo site_url('cv/get_edit/' . $data['id']); ?>">Update Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-warning nav-link outline-warning active" aria-current="page" href="<?php echo site_url('cv/delete/' . $data['id']); ?>">Delete Data</a>
+                    </li>
+                </ul>
+                <form class="mt-2 d-flex" role="logout">
+                    <a class="btn text-light text-light btn-outline-warning" aria-current="page" href="<?php echo site_url('cv/logout/' . $data['id']); ?>">Logout</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-warning container-fluid p-5">
         <div class="row d-flex justifay-content-center">
             <div class="col-lg-12 col-xs-8">
                 <div class="text-center">
@@ -25,7 +46,7 @@
         <div class="row">
             <div class="col-5">
                 <h1>Riwayat Pendidikan</h1>
-                <table class="table table-hover mx-auto ">
+                <table class="table table-striped table-hover mx-auto">
 
                     <tr>
                         <td>Perguruan Tinggi</td>
@@ -45,9 +66,6 @@
                         <td><?= $data['smp'] ?></td>
                     </tr>
                 </table>
-                <a href="<?php echo site_url('cv/add/' . $data['id']); ?>" class="btn btn-sm btn-primary">Tambah</a>
-                <a href="<?php echo site_url('cv/get_edit/' . $data['id']); ?>" class="btn btn-sm btn-warning">Update</a>
-                <a href="<?php echo site_url('cv/delete/' . $data['id']); ?>" class="btn btn-sm btn-danger">Delete</a>
             </div>
             <div class="col-3"></div>
             <div class="col-4">
@@ -144,7 +162,7 @@
                 <br>
                 <h1>Pengalaman</h1>
                 <br>
-                <table class="table table-hover mx-auto">
+                <table class="table table-striped table-hover mx-auto">
                     <tr>
                         <td>Search Enggine Optimization</td>
                         <td> : </td>
@@ -171,10 +189,10 @@
         </div>
     </div>
     </div>
-    <div class="container-fluid p-1 bg-warning">
+    <div class="container-fluid p-1 bg-dark">
         <div class="row justifay-content-center">
             <div class="col-lg-12 col-xs-8">
-                <div class="text-center">
+                <div class="text-warning text-center">
                     <h6 class="fontitalic"> &copy; Copyright 2022
                         All Right Reserved. By Haldian</h6>
                 </div>

@@ -21,7 +21,6 @@ class Cv extends BaseController
     {
         echo view('aboute/add');
     }
-
     function simpan()
     {
         $this->data->save([
@@ -38,13 +37,8 @@ class Cv extends BaseController
         ]);
         return redirect()->to('cv');
     }
-    function delete($id)
-    {
-        $this->data->delete($id);
-        return redirect()->to('cv');
-    }
 
-    function get_edit($id)
+    public function get_edit($id)
     {
         $result =  $this->data->where(['id' => $id])->get();
         if ($result->getNumRows() > 0) {
@@ -66,6 +60,8 @@ class Cv extends BaseController
             echo "Data Was Not Found";
         }
     }
+
+
     function update()
     {
         $this->data->save([
@@ -81,5 +77,16 @@ class Cv extends BaseController
             'tempat_lahir' => $this->request->getVar('tempat_lahir'),
         ]);
         return redirect()->to('cv');
+    }
+
+    function delete($id)
+    {
+        $this->data->delete($id);
+        return redirect()->to('cv');
+    }
+
+    public function logout()
+    {
+        echo view('login/index');
     }
 }

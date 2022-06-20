@@ -17,23 +17,23 @@
             </div>
         </div>
 
-        <form action="/cv/update" method="POST">
+        <form action="<?php echo site_url('/cv/update'); ?>" method="post">
             <div class="row mt-3 form-floatin">
                 <div class="col-lg-3">
                     <label for="">Nama</label>
                 </div>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control" name="nama" placeholder="Nama">
+                    <input type="text" class="form-control" name="nama" placeholder="Nama" value="<?= $nama; ?>">
                 </div>
+                <input type="hidden" name="id" value="<?= $id; ?>">
             </div>
-
 
             <div class=" row mt-3">
                 <div class="col-lg-3">
                     <label for="">Perguruan Tinggi</label>
                 </div>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control" name="pergruan_tinggi" placeholder="Perguruan Tinggi">
+                    <input type="text" class="form-control" name="pergruan_tinggi" placeholder="Perguruan Tinggi" value="<?= $pergruan_tinggi; ?>">
                 </div>
             </div>
 
@@ -42,7 +42,7 @@
                     <label for="">SMA</label>
                 </div>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control" name="sma" placeholder="SMA">
+                    <input type="text" class="form-control" name="sma" placeholder="SMA" value="<?= $sma; ?>">
                 </div>
             </div>
 
@@ -51,7 +51,7 @@
                     <label for="floatingInput">SMP</label>
                 </div>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control" name="smp" placeholder="SMP">
+                    <input type="text" class="form-control" name="smp" placeholder="SMP" value="<?= $smp; ?>">
                 </div>
             </div>
 
@@ -60,7 +60,7 @@
                     <label for="">Alamat</label>
                 </div>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control" name="alamat" placeholder="Alamat">
+                    <input type="text" class="form-control" name="alamat" placeholder="Alamat" value="<?= $alamat; ?>">
                 </div>
             </div>
 
@@ -69,7 +69,7 @@
                     <label for="">Kontak</label>
                 </div>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control" name="kontak" placeholder="Kontak">
+                    <input type="text" class="form-control" name="kontak" placeholder="Kontak" value="<?= $kontak ?>">
                 </div>
             </div>
 
@@ -78,7 +78,7 @@
                     <label for="">E-Mail</label>
                 </div>
                 <div class="col-lg-6">
-                    <input type="email" class="form-control" name="email" placeholder="E-Mail">
+                    <input type="email" class="form-control" name="email" placeholder="E-Mail" value="<?= $email; ?>">
                 </div>
             </div>
 
@@ -87,7 +87,7 @@
                     <label for="">Tanggal Lahir</label>
                 </div>
                 <div class="col-lg-6">
-                    <input type="date" class="form-control" name="tanggal_lahir" placeholder="Tanggal Lahir">
+                    <input type="date" class="form-control" name="tanggal_lahir" placeholder="Tanggal Lahir" value="<?= $tanggal_lahir; ?>">
                 </div>
             </div>
 
@@ -96,12 +96,12 @@
                     <label for="">Tempat Lahir</label>
                 </div>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control" name="tempat_lahir" placeholder="Tempat Lahir">
+                    <input type="text" class="form-control" name="tempat_lahir" placeholder="Tempat Lahir" value="<?= $tempat_lahir; ?>">
                 </div>
             </div>
             <div class="row  mt-3">
                 <div class="col-lg-9">
-                    <button class="btn btn-primary" type="submit">simpan</button>
+                    <button class="btn btn-primary" type="submit">update</button>
 
                 </div>
             </div>
